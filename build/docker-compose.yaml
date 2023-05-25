@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  ray:
+    stdin_open: true
+    image: dleongsh/ray-dory:v1.18.0
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    volumes:
+      - ../:/dory
+    ports:
+     - 8000:8000
+     - 8080:8080
+     - 8265:8265
+    ulimits:
+      memlock: -1
+      stack: 67108864
+    shm_size: 16gb
