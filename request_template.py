@@ -1,7 +1,7 @@
 import requests
 import base64
 
-AUDIO_PATH = 'A1004r.wav'
+AUDIO_PATH = 'tests/sample.wav'
 
 with open(AUDIO_PATH, 'rb') as audio_str:
     byte_string = base64.b64encode(audio_str.read()).decode('utf-8')
