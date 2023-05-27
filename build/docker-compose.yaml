@@ -3,14 +3,14 @@ version: '3.9'
 services:
   ray:
     stdin_open: true
-    image: dleongsh/ray-dory:v1.18.0
+    image: ray/asr:v2.4.0-torch2.0.1
     deploy:
       resources:
         reservations:
           devices:
             - capabilities: [gpu]
     volumes:
-      - ../:/dory
+      - ../:/asr
     ports:
      - 8000:8000
      - 8080:8080

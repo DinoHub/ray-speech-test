@@ -1,4 +1,0 @@
-ray[serve]
-starlette
-uvicorn
-numpy

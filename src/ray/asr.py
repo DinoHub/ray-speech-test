@@ -18,7 +18,7 @@ RUNTIME_ENV = {
     }
 }
 
-@serve.deployment(ray_actor_options={"num_cpus": config.num_cpus, "num_gpus": config.num_gpus})
+@serve.deployment(ray_actor_options={'num_cpus': config.num_cpus, 'num_gpus': config.num_gpus, 'runtime_env': RUNTIME_ENV})
 class RaySpeechRecognizer:
 
     def __init__(self):

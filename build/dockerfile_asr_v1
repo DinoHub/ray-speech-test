@@ -1,5 +1,0 @@
-FROM dleongsh/dory:1.18.0
-
-RUN python3 -m pip install --no-cache-dir "ray[serve]" starlette uvicorn gpustat==1.0.0
-
-RUN ["bash"]
